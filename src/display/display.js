@@ -11,8 +11,7 @@ export default class Display {
         this.cnv = document.createElement("canvas");
         this.ctx = this.cnv.getContext("2d");
         
-        this.cnv.setAttribute("style", "image-rendering : pixelated;");
-        this.ctx.imageSmoothingEnabled = false;
+        this.cnv.setAttribute("style", "image-rendering : crisp-edges;");
         
         contaner.appendChild(this.cnv);
         
@@ -40,5 +39,7 @@ export default class Display {
             this.cnv.width  = this.contaner.clientWidth;
             this.cnv.height = this.contaner.clientWidth / this.WHGameRatio;
         }
+
+        this.ctx.imageSmoothingEnabled = false;
     }
 }
