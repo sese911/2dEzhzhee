@@ -22,6 +22,9 @@ export default class Vec2 {
         this.y *= number;
         return this;
     }
+    static mulByNum(vec, number) {
+        return new Vec2(vec.x * number, vec.y * number);   
+    }
 
     trunc() {
         this.x = ~~this.x;

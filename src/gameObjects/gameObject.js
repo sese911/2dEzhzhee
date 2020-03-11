@@ -1,4 +1,4 @@
-import Vec2 from "../math/vec2";
+import Vec2 from "../math/vec2.js";
 
 export default class GameObject {
     constructor(x, y) {
@@ -7,7 +7,7 @@ export default class GameObject {
         this.color = "red";
     }
 
-    move() {
-        this.pos.add(this.vel);
+    move(dt) {
+        this.pos.add( Vec2.mulByNum(this.vel, dt) );
     }
 }

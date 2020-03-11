@@ -20,7 +20,7 @@ export default class Loop {
 
         while (this.elapsedTime >= this.timeStep) {
             this.elapsedTime -= this.timeStep;
-            this.update(this.timeStep);
+            this.update(this.timeStep / 1000); // convert timeStep from milliseconds to seconds
             this.updated = true;
         }
 
